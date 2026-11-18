@@ -2,6 +2,12 @@
 
 ## [Unreleased]
 
+## [0.8.4] - 2026-11-18
+
+- Recognize HarmonyOS 26 SDK versions and check minimum, target and compile SDK order per product.
+- Preserve implicit target SDKs during migration and ignore commented-out bundle names when editing JSON5.
+- Rebuild the extension before packaging a VSIX.
+
 ## [0.8.3] - 2026-03-25
 
 > Summary: one-click emulator run hardening, real-smoke fixture alignment, and machine-environment diagnostics.

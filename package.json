@@ -2,7 +2,7 @@
   "name": "harmony-dev-tools",
   "displayName": "HarmonyOS Dev Tools",
   "description": "Build, run, debug, inspect, and validate HarmonyOS apps directly in VS Code",
-  "version": "0.8.3",
+  "version": "0.8.4",
   "publisher": "corn12138",
   "license": "MIT",
   "icon": "resources/icons/icon.png",
@@ -688,6 +688,7 @@
     ]
   },
   "scripts": {
+    "vscode:prepublish": "pnpm run build:prod",
     "build": "esbuild src/extension.ts --bundle --outdir=dist --external:vscode --format=cjs --platform=node --target=es2022 --sourcemap",
     "build:prod": "pnpm build --minify --tree-shaking=true",
     "watch": "pnpm build --watch",
@@ -700,6 +701,9 @@
     "package": "vsce package --no-dependencies",
     "publish": "vsce publish --no-dependencies",
     "size-check": "node scripts/size-check.js"
+  },
+  "dependencies": {
+    "json5": "^2.2.3"
   },
   "devDependencies": {
     "@types/glob": "^9.0.0",

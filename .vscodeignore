@@ -7,7 +7,9 @@ node_modules/**
 docs/**
 scripts/**
 *.ts
-!dist/**
+dist/**
+!dist/extension.js
+*.vsix
 tsconfig.json
 vitest.config.ts
 .eslintrc.*
