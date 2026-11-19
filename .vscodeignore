@@ -11,6 +11,8 @@ dist/**
 !dist/extension.js
 *.vsix
 tsconfig.json
+tsconfig.e2e.json
+*.log
 vitest.config.ts
 .eslintrc.*
 ARCHITECTURE.md
