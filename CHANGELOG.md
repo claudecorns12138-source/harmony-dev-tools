@@ -2,6 +2,9 @@
 
 ## [Unreleased]
 
+- Use device-side POSIX quoting for app launches from Windows hosts.
+- Make environment, terminal, signing and real-smoke setup regression tests portable across Windows and POSIX hosts.
+
 ## [0.8.4] - 2026-11-18
 
 - Recognize HarmonyOS 26 SDK versions and check minimum, target and compile SDK order per product.

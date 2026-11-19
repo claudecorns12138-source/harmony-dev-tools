@@ -73,7 +73,10 @@ describe('terminal build runner hvigor fallback', () => {
     expect(terminals).toHaveLength(1);
     const command = terminals[0].sentText[0].text;
     expect(command).toContain("'/Applications/DevEco-Studio.app/Contents/tools/hvigor/bin/hvigorw' assembleHap --no-daemon");
-    expect(command).toContain('/mock/hdc -t emulator-5554 install "$HAP_FILE"');
+    expect(command).toContain(process.platform === 'win32'
+      ? '/mock/hdc -t emulator-5554 install $hap.FullName'
+      : '/mock/hdc -t emulator-5554 install "$HAP_FILE"');
+    expect(terminals[0].options.shellPath).toBe(process.platform === 'win32' ? 'powershell.exe' : undefined);
     expect(command).toContain('/mock/hdc -t emulator-5554 shell aa start -a EntryAbility -b com.demo.app');
   });
 
