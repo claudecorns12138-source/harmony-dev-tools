@@ -2,6 +2,11 @@
 
 ## [Unreleased]
 
+## [0.8.5] - 2026-11-20
+
+- Quote application identifiers for the device shell in terminal launch, stop and debug workflows.
+- Render terminal progress messages literally, preserving quotes and shell metacharacters in project metadata.
+- Add a release check for types, unit tests and production bundle size; run the size check before VSIX packaging.
 - Use device-side POSIX quoting for app launches from Windows hosts.
 - Make environment, terminal, signing and real-smoke setup regression tests portable across Windows and POSIX hosts.
 
